@@ -2,8 +2,8 @@
 " set guifont=SauceCodePro\ Nerd\ Font\ Mono:h12
 set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 13
 
-" noremap <Leader>+ :let &guifont=substitute(&guifont, '\(\d\+\)', '\=submatch(1)+1', '')<cr>
-" noremap <Leader>- :let &guifont=substitute(&guifont, '\(\d\+\)', '\=submatch(1)-1', '')<cr>
+noremap <Leader>+ :let &guifont=substitute(&guifont, '\(\d\+\)', '\=submatch(1)+1', '')<cr>
+noremap <Leader>- :let &guifont=substitute(&guifont, '\(\d\+\)', '\=submatch(1)-1', '')<cr>
 
 " See :h 'go'
 " Disable GUI tool bar
