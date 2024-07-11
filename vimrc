@@ -69,8 +69,17 @@ if version >= 824
         au User lsp_setup call lsp#register_server({
             \ 'name': 'nixd',
             \ 'cmd': {server_info->['nixd']},
-            \ 'allowlist': ['nix']
-            \ })
+            \ 'allowlist': ['nix'],
+            \ 'workspace_config': {
+                \ 'nixd': {
+                    \ 'nixpkgs': { 'expr': 'import (builtins.getFlake \"/home/kjartanm/flake.nix\").inputs.nixpkgs { }' },
+                    \ 'options': {
+                        \ 'nixos': { 'expr': '(builtins.getFlake \"/home/kjartanm/flake.nix\").nixosConfigurations.T14.options' },
+                        \ 'home-manager': { 'expr': '(builtins.getFlake \"/home/kjartanm/flake.nix\").homeConfigurations.\"kjartanm@T14\".options' }
+                    \ }
+                \ }
+            \ }
+        \ })
     endif
 
     function! s:on_lsp_buffer_enabled() abort
