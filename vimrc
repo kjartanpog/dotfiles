@@ -139,6 +139,9 @@ set wildoptions+=pum
 nnoremap <SPACE> <Nop>
 let mapleader="\<Space>"
 
+" Swap to previous buffer
+noremap <Leader><BS> :b#
+
 " Copy to system clipboard mappings
 noremap <Leader>y "+y
 noremap <Leader>d "+d
