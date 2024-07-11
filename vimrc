@@ -140,7 +140,7 @@ nnoremap <SPACE> <Nop>
 let mapleader="\<Space>"
 
 " Swap to previous buffer
-noremap <Leader><BS> :b#
+noremap <Leader><BS> :b#<CR>
 
 " Copy to system clipboard mappings
 noremap <Leader>y "+y
