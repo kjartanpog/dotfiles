@@ -35,10 +35,13 @@ set mousemodel=popup
 
 " set lines=40 columns=170
 
-" hi Normal guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
-" hi NormalNC guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
-" hi SignColumn guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
-" hi StatusLineNC guifg=#6e6a86 guibg=#000000 gui=NONE cterm=NONE
-" hi Menu guifg=#1F1D2E guibg=#000000
-" hi Menu guifg=#e0def4 guibg=#000000
-" hi Menu guibg=#000000
+" Completely black background for OLED monitors
+if $OLED==1
+    hi Normal guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
+    hi NormalNC guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
+    hi SignColumn guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
+    hi StatusLineNC guifg=#6e6a86 guibg=#000000 gui=NONE cterm=NONE
+    " hi Menu guifg=#1F1D2E guibg=#000000
+    " hi Menu guifg=#e0def4 guibg=#000000
+    " hi Menu guibg=#000000
+endif
