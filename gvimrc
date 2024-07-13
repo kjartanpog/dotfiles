@@ -2,6 +2,9 @@
 " set guifont=SauceCodePro\ Nerd\ Font\ Mono:h12
 set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 13
 
+" Visual bell instead of audio
+set vb
+
 noremap <Leader>+ :let &guifont=substitute(&guifont, '\(\d\+\)', '\=submatch(1)+1', '')<cr>
 noremap <Leader>- :let &guifont=substitute(&guifont, '\(\d\+\)', '\=submatch(1)-1', '')<cr>
 
