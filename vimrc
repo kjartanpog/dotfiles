@@ -171,7 +171,13 @@ noremap <Leader>tt :tab term<CR>
 
 " PLUGINS {{{
 
-" Plugin code goes here.
+" vimwiki
+let g:vimwiki_list = [{
+\ 'path': '~/Notes/',
+\ 'name': 'Personal Notes',
+\ 'syntax': 'markdown',
+\ 'ext': '.md'
+\}]
 
 " }}}
 
