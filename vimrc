@@ -169,6 +169,9 @@ noremap <Leader>bt :BTags<CR>
 noremap <Leader>bf :BLines<CR>
 noremap <Leader>tt :tab term<CR>
 noremap <Leader>go :Goyo<CR>
+noremap <Leader>ga :Git add %<CR>
+noremap <Leader>gc :Git commit<CR>
+noremap <Leader>gp :Git push<CR>
 " }}}
 
 " PLUGINS {{{
