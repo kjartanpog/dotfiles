@@ -49,6 +49,37 @@ if version >= 703
     set undoreload=10000
 endif
 
+set tabstop=4 "READ :h 'tabstop' for effective tab setup configurations
+set shiftwidth=4
+" Insert number of spaces equal to 'tabstop' instead of <Tab>
+set expandtab
+set smarttab
+" set softtabstop
+" Enable backspace deletion of specified whitespace characters while in INSERT mode.
+set backspace=indent,eol,nostop
+
+" let g:netrw_liststyle = 3
+" Show again by pressing I
+let g:netrw_banner = 0
+
+filetype on
+filetype plugin on
+filetype indent on
+
+set history=200
+
+set noswapfile
+
+set showmatch
+
+set path+=**
+set wildmenu
+" More Bash like tab completions
+set wildmode=longest:full,full
+" Nice vertical list window with fuzzy find
+set wildoptions+=fuzzy
+set wildoptions+=pum
+
 " }}}
 
 " LSP {{{
@@ -111,36 +142,6 @@ xmap ð ]
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " VISUAL REPRESENTATION of the number of spaces that a <Tab> counts for
-set tabstop=4 "READ :h 'tabstop' for effective tab setup configurations
-set shiftwidth=4
-" Insert number of spaces equal to 'tabstop' instead of <Tab>
-set expandtab
-set smarttab
-" set softtabstop
-" Enable backspace deletion of specified whitespace characters while in INSERT mode.
-set backspace=indent,eol,nostop
-
-" let g:netrw_liststyle = 3
-" Show again by pressing I
-let g:netrw_banner = 0
-
-filetype on
-filetype plugin on
-filetype indent on
-
-set history=200
-
-set noswapfile
-
-set showmatch
-
-set path+=**
-set wildmenu
-" More Bash like tab completions
-set wildmode=longest:full,full
-" Nice vertical list window with fuzzy find
-set wildoptions+=fuzzy
-set wildoptions+=pum
 
 " Set SPACE as leader key
 nnoremap <SPACE> <Nop>
@@ -167,6 +168,7 @@ noremap <Leader>bb :Buffers<CR>
 noremap <Leader>bt :BTags<CR>
 noremap <Leader>bf :BLines<CR>
 noremap <Leader>tt :tab term<CR>
+noremap <Leader>go :Goyo<CR>
 " }}}
 
 " PLUGINS {{{
