@@ -151,11 +151,15 @@ let mapleader="\<Space>"
 noremap <Leader><BS> :b#<CR>
 
 " Copy to system clipboard mappings
-noremap <Leader>y "+y
-noremap <Leader>d "+d
-noremap <Leader>p "+p
+" noremap <Leader>y "+y
+" noremap <Leader>d "+d
+" noremap <Leader>p "+p
 " noremap <C-S-v> "+p
 " inoremap <C-S-v> <Esc>"+pi
+
+setglobal pastetoggle=<F2>
+
+" 
 
 noremap <Leader>fb :Buffers<CR>
 noremap <Leader>ff :Files<CR>
