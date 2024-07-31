@@ -156,8 +156,6 @@ let mapleader="\<Space>"
 
 setglobal pastetoggle=<F2>
 
-" 
-
 noremap <Leader>fb :Buffers<CR>
 noremap <Leader>ff :Files<CR>
 noremap <Leader>sff :split<CR>:Files<CR>
