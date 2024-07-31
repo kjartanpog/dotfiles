@@ -2,7 +2,8 @@
 
 " Disable vi-compatible defaults
 set nocompatible
-" Allows buffers to be hidden if you modified a buffer
+" Don't display a warning when moving away from a modified buffer with unsaved
+" changes
 set hidden
 
 set winminheight=0
