@@ -109,7 +109,6 @@ function! ToggleNetrw()
     endif
 endfunction
 
-noremap <silent> <Leader>e :call ToggleNetrw()<CR>
 
 " }}}
 
@@ -210,6 +209,7 @@ noremap <Leader>go :Goyo<CR>
 noremap <Leader>ga :Git add %<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gp :Git push<CR>
+noremap <silent> <Leader>e :call ToggleNetrw()<CR>
 " }}}
 
 " PLUGINS {{{
