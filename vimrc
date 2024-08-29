@@ -190,6 +190,7 @@ noremap <Leader>gp :Git push<CR>
 
 " vim-slime
 let g:slime_target = "vimterminal"
+autocmd FileType r let b:slime_vimterminal_cmd='R'
 
 " vimwiki
 let g:vimwiki_list = [{
