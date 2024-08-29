@@ -176,6 +176,9 @@ noremap <Leader>gp :Git push<CR>
 
 " PLUGINS {{{
 
+" vim-slime
+let g:slime_target = "vimterminal"
+
 " vimwiki
 let g:vimwiki_list = [{
 \ 'path': '~/Notes/',
