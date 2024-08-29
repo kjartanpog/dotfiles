@@ -62,6 +62,8 @@ set backspace=indent,eol,nostop
 " let g:netrw_liststyle = 3
 " Show again by pressing I
 let g:netrw_banner = 0
+" Set the default width of a netrw to 20% of window size
+let g:netrw_winsize = 20
 
 filetype on
 filetype plugin on
