@@ -101,6 +101,14 @@ if version >= 824
     " Enables virtual text to be shown next to diagnostic errors
     let g:lsp_diagnostics_virtual_text_enabled = 0
 
+    if (executable('R'))
+        au User lsp_setup call lsp#register_server({
+        \ 'name': 'r',
+        \ 'cmd': {server_info->['R', '--slave', '-e', 'languageserver::run()']},
+        \ 'allowlist': ['r'],
+        \ })
+    endif
+
     if (executable('nixd'))
         au User lsp_setup call lsp#register_server({
             \ 'name': 'nixd',
