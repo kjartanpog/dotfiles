@@ -59,17 +59,11 @@ set smarttab
 " Enable backspace deletion of specified whitespace characters while in INSERT mode.
 set backspace=indent,eol,nostop
 
-" let g:netrw_liststyle = 3
-" Show again by pressing I
-let g:netrw_banner = 0
-" Set the default width of a netrw to 20% of window size
-let g:netrw_winsize = 20
-" Pressing <cr> will open the file in the previous window
-let g:netrw_browse_split = 4
 
 filetype on
 filetype plugin on
 filetype indent on
+
 
 set history=200
 
@@ -84,6 +78,38 @@ set wildmode=longest:full,full
 " Nice vertical list window with fuzzy find
 set wildoptions+=fuzzy
 set wildoptions+=pum
+
+" }}}
+
+" Netrw {{{
+
+" let g:netrw_liststyle = 3
+" Show again by pressing I
+let g:netrw_banner = 0
+" Set the default width of a netrw to 20% of window size
+let g:netrw_winsize = 20
+" Pressing <cr> will open the file in the previous window
+let g:netrw_browse_split = 4
+
+let g:NetrwIsOpen=0
+
+function! ToggleNetrw()
+    if g:NetrwIsOpen
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i 
+            endif
+            let i-=1
+        endwhile
+        let g:NetrwIsOpen=0
+    else
+        let g:NetrwIsOpen=1
+        silent Lexplore
+    endif
+endfunction
+
+noremap <silent> <Leader>e :call ToggleNetrw()<CR>
 
 " }}}
 
