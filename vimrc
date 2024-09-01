@@ -240,8 +240,8 @@ set foldcolumn=1
 "     autocmd FileType vim setlocal omnifunc=syntaxcomplete#Complete
 " augroup END
 set foldmethod=expr
-  \ foldexpr=lsp#ui#vim#folding#foldexpr()
-  \ foldtext=lsp#ui#vim#folding#foldtext()
+set foldexpr=lsp#ui#vim#folding#foldexpr()
+set foldtext=lsp#ui#vim#folding#foldtext()
 " }}}
 
 " VIMSCRIPT {{{
