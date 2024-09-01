@@ -135,27 +135,27 @@ if version >= 824
     endif
 
 
-    if executable('nil')
-        autocmd User lsp_setup call lsp#register_server({
-            \ 'name': 'nil',
-            \ 'cmd': {server_info->['nil']},
-            \ 'whitelist': ['nix'],
-            \ })
-    endif
-    " if (executable('nixd'))
-    "     au User lsp_setup call lsp#register_server({
-    "         \ 'name': 'nixd',
-    "         \ 'cmd': {server_info->['nixd']},
-    "         \ 'allowlist': ['nix'],
-    "         \ 'workspace_config': {
-    "             \ 'nixpkgs': { 'expr': 'import (builtins.getFlake \"/home/kjartanm/flake.nix\").inputs.nixpkgs { }' },
-    "             \ 'options': {
-    "                 \ 'nixos': { 'expr': '(builtins.getFlake \"/home/kjartanm/flake.nix\").nixosConfigurations.T14.options' },
-    "                 \ 'home-manager': { 'expr': '(builtins.getFlake \"/home/kjartanm/flake.nix\").homeConfigurations.\"kjartanm@T14\".options' }
-    "             \ }
-    "         \ }
-    "     \ })
+    " if executable('nil')
+    "     autocmd User lsp_setup call lsp#register_server({
+    "         \ 'name': 'nil',
+    "         \ 'cmd': {server_info->['nil']},
+    "         \ 'whitelist': ['nix'],
+    "         \ })
     " endif
+    if (executable('nixd'))
+        au User lsp_setup call lsp#register_server({
+            \ 'name': 'nixd',
+            \ 'cmd': {server_info->['nixd']},
+            \ 'allowlist': ['nix'],
+            \ 'workspace_config': {
+                \ 'nixpkgs': { 'expr': 'import (builtins.getFlake \"/home/kjartanm/flake.nix\").inputs.nixpkgs { }' },
+                \ 'options': {
+                    \ 'nixos': { 'expr': '(builtins.getFlake \"/home/kjartanm/flake.nix\").nixosConfigurations.T14.options' },
+                    \ 'home-manager': { 'expr': '(builtins.getFlake \"/home/kjartanm/flake.nix\").homeConfigurations.\"kjartanm@T14\".options' }
+                \ }
+            \ }
+        \ })
+    endif
 
     function! s:on_lsp_buffer_enabled() abort
         setlocal omnifunc=lsp#complete
