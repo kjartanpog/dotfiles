@@ -242,7 +242,7 @@ augroup END
 
 augroup filetype_nix
     autocmd!
-    autocmd FileType vim setlocal foldmethod=expr
+    autocmd FileType nix setlocal foldmethod=expr
       \ foldexpr=lsp#ui#vim#folding#foldexpr()
       \ foldtext=lsp#ui#vim#folding#foldtext()
 augroup END
