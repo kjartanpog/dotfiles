@@ -234,20 +234,14 @@ set foldcolumn=1
 
 " Auto enable code folding for vim configuration files using the marker method
 " of folding (h fold-marker)
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-    autocmd FileType vim setlocal omnifunc=syntaxcomplete#Complete
-augroup END
-
-augroup filetype_nix
-    autocmd!
-    autocmd FileType nix setlocal foldmethod=expr
-      \ foldexpr=lsp#ui#vim#folding#foldexpr()
-      \ foldtext=lsp#ui#vim#folding#foldtext()
-augroup END
-
-
+" augroup filetype_vim
+"     autocmd!
+"     autocmd FileType vim setlocal foldmethod=marker
+"     autocmd FileType vim setlocal omnifunc=syntaxcomplete#Complete
+" augroup END
+set foldmethod=expr
+  \ foldexpr=lsp#ui#vim#folding#foldexpr()
+  \ foldtext=lsp#ui#vim#folding#foldtext()
 " }}}
 
 " VIMSCRIPT {{{
