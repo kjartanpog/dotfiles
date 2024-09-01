@@ -210,6 +210,11 @@ noremap <Leader>ga :Git add %<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gp :Git push<CR>
 noremap <silent> <Leader>e :call ToggleNetrw()<CR>
+noremap <Leader>hi :LspHover<cr>
+nnoremap <buffer> <expr><c-j> lsp#scroll(+4)
+nnoremap <buffer> <expr><c-k> lsp#scroll(-4)
+
+
 " }}}
 
 " PLUGINS {{{
