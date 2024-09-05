@@ -10,11 +10,12 @@ set vb
 noremap <Leader>+ :let &guifont=substitute(&guifont, '\(\d\+\)', '\=submatch(1)+1', '')<cr>
 noremap <Leader>- :let &guifont=substitute(&guifont, '\(\d\+\)', '\=submatch(1)-1', '')<cr>
 
+
 " See :h 'go'
 " Disable GUI tool bar
 set guioptions -=T
 " Disable GUI menu bar
-" set guioptions -=m
+set guioptions -=m
 " Disable GUI tab bar
 set guioptions -=e
 
@@ -22,6 +23,10 @@ set guioptions -=l
 set guioptions -=L
 set guioptions -=r
 set guioptions -=R
+
+nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
+nnoremap <C-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
 
 " nnoremap <leader>m :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 " nnoremap <leader>T :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
