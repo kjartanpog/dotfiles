@@ -91,23 +91,23 @@ let g:netrw_winsize = 20
 " Pressing <cr> will open the file in the previous window
 let g:netrw_browse_split = 4
 
-let g:NetrwIsOpen=0
+" let g:NetrwIsOpen=0
 
-function! ToggleNetrw()
-    if g:NetrwIsOpen
-        let i = bufnr("$")
-        while (i >= 1)
-            if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i 
-            endif
-            let i-=1
-        endwhile
-        let g:NetrwIsOpen=0
-    else
-        let g:NetrwIsOpen=1
-        silent Lexplore
-    endif
-endfunction
+" function! ToggleNetrw()
+"     if g:NetrwIsOpen
+"         let i = bufnr("$")
+"         while (i >= 1)
+"             if (getbufvar(i, "&filetype") == "netrw")
+"                 silent exe "bwipeout " . i 
+"             endif
+"             let i-=1
+"         endwhile
+"         let g:NetrwIsOpen=0
+"     else
+"         let g:NetrwIsOpen=1
+"         silent Lexplore
+"     endif
+" endfunction
 
 
 " }}}
@@ -217,7 +217,7 @@ noremap <Leader>go :Goyo<CR>
 noremap <Leader>ga :Git add %<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gp :Git push<CR>
-noremap <silent> <Leader>e :call ToggleNetrw()<CR>
+" noremap <silent> <Leader>e :call ToggleNetrw()<CR>
 noremap <Leader>hi :LspHover<cr>
 nnoremap <buffer> <expr><c-j> lsp#scroll(+4)
 nnoremap <buffer> <expr><c-k> lsp#scroll(-4)
