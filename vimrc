@@ -422,6 +422,13 @@ let &t_EI = "\e[2 q"
 set termguicolors
 " " set background=dark
 colorscheme rosepine
+hi Normal guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
+hi NormalNC guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
+hi SignColumn guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
+hi StatusLineNC guifg=#6e6a86 guibg=#000000 gui=NONE cterm=NONE
+    " hi Menu guifg=#1F1D2E guibg=#000000
+    " hi Menu guifg=#e0def4 guibg=#000000
+    " hi Menu guibg=#000000
 " let g:colors_name = 'rosepine'
 " " let g:disable_bg = 1
 " " let g:disable_float_bg = 1
@@ -478,13 +485,3 @@ colorscheme rosepine
 " " endfunction
 "
 " }}}
-" Completely black background for OLED monitors
-if $OLED==1
-    hi Normal guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
-    hi NormalNC guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
-    hi SignColumn guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
-    hi StatusLineNC guifg=#6e6a86 guibg=#000000 gui=NONE cterm=NONE
-    " hi Menu guifg=#1F1D2E guibg=#000000
-    " hi Menu guifg=#e0def4 guibg=#000000
-    " hi Menu guibg=#000000
-endif
