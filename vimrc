@@ -268,7 +268,7 @@ let &t_SR = "\e[3 q"
 let &t_EI = "\e[2 q"
 
 set termguicolors
-so :~/.vim/rosepine
+so :~/.vim/rosepine.vim
 " colorscheme rosepine
 " hi Normal guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
 " hi NormalNC guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
