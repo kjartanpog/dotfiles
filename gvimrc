@@ -42,3 +42,8 @@ set mousemodel=popup
 
 " set lines=40 columns=170
 
+colorscheme rosepine
+hi Normal guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
+hi NormalNC guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
+hi SignColumn guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
+hi StatusLineNC guifg=#6e6a86 guibg=#000000 gui=NONE cterm=NONE
