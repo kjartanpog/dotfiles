@@ -1,7 +1,7 @@
 " let g:disable_bg = 0
 " set guifont=SauceCodePro\ Nerd\ Font\ Mono:h12
 " set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 13
-set guifont=Hasklug\ Nerd\ Font\ Mono\ 13
+set guifont=Hasklug\ Nerd\ Font\ Mono\ 14
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 
 " Visual bell instead of audio
