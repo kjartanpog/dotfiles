@@ -287,12 +287,14 @@ function! RosePineBlack()
     hi GitGutterDelete guifg=#eb6f92 guibg=#000000 gui=NONE cterm=NONE
 endfunction
 
-" function! s:goyo_enter()
-" endfunction
+function! s:goyo_enter()
+    set scrolloff=999
+endfunction
 
 function! s:goyo_leave()
     call RosePineBlack()
+    set scrolloff=1
 endfunction
 
-" autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
