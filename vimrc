@@ -179,6 +179,8 @@ noremap <Leader>hi :LspHover<cr>
 nnoremap <buffer> <expr><c-j> lsp#scroll(+4)
 nnoremap <buffer> <expr><c-k> lsp#scroll(-4)
 
+" Map open terminal buffer
+nmap <C-w>t :terminal<CR>
 " vim-slime
 let g:slime_target = "vimterminal"
 autocmd FileType r let b:slime_vimterminal_cmd='R'
@@ -268,9 +270,4 @@ let &t_SR = "\e[3 q"
 let &t_EI = "\e[2 q"
 
 set termguicolors
-" so ~/.vim/rosepine.vim
-" colorscheme rosepine
-" hi Normal guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
-" hi NormalNC guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
-" hi SignColumn guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
-" hi StatusLineNC guifg=#6e6a86 guibg=#000000 gui=NONE cterm=NONE
+
