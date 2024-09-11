@@ -181,6 +181,11 @@ nnoremap <buffer> <expr><c-k> lsp#scroll(-4)
 
 " Map open terminal buffer
 nmap <C-w>t :terminal<CR>
+
+" Toggle floatterm
+nnoremap   <silent>   <C-w>f   :FloatermToggle<CR>
+tnoremap   <silent>   <C-w>f   <C-\><C-n>:FloatermToggle<CR>
+
 " vim-slime
 let g:slime_target = "vimterminal"
 autocmd FileType r let b:slime_vimterminal_cmd='R'
