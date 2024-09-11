@@ -291,6 +291,8 @@ function! s:goyo_enter()
     set scrolloff=999
     set noshowmode
     set noshowcmd
+    set nocursorline
+    set Limelight
 endfunction
 
 function! s:goyo_leave()
@@ -298,6 +300,7 @@ function! s:goyo_leave()
     set scrolloff=1
     set showmode
     set showcmd
+    set Limelight!
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
