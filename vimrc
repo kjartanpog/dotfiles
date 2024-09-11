@@ -289,11 +289,15 @@ endfunction
 
 function! s:goyo_enter()
     set scrolloff=999
+    set noshowmode
+    set noshowcmd
 endfunction
 
 function! s:goyo_leave()
     call RosePineBlack()
     set scrolloff=1
+    set showmode
+    set showcmd
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
