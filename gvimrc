@@ -47,3 +47,6 @@ hi Normal guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
 hi NormalNC guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
 hi SignColumn guifg=#e0def4 guibg=#000000 gui=NONE cterm=NONE
 hi StatusLineNC guifg=#6e6a86 guibg=#000000 gui=NONE cterm=NONE
+hi GitGutterAdd    guifg=#9ccfd8 guibg=#000000 gui=NONE cterm=NONE
+hi GitGutterChange guifg=#ebbcba guibg=#000000 gui=NONE cterm=NONE
+hi GitGutterDelete guifg=#eb6f92 guibg=#000000 gui=NONE cterm=NONE
