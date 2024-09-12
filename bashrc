@@ -11,7 +11,7 @@ function v() {
     fi
 }
 alias vi="vim"
-alias rm="rm -i"
+# alias rm="rm -i"
 alias t="tmux"
 alias ff="fastfetch"
 alias monka="echo monka"
